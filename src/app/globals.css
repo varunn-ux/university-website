@@ -19,4 +19,18 @@ html {
 
 body {
   min-height: 100vh;
+
+  font-family: var(--font-family-base);
+
+  background: var(--color-background);
+
+  color: var(--color-foreground);
+  
+  line-height: var(--line-height-normal);
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
 }
