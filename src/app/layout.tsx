@@ -10,7 +10,11 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-  title: "LNCT University",
+  title: {
+    default: "LNCT University",
+    template: "%s | LNCT University",
+  },
+
   description: "Official website of LNCT University",
 };
 
