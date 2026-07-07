@@ -9,6 +9,7 @@
  * ==========================================================
  */
 
+
 export const baseStyles =
   "inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] disabled:pointer-events-none disabled:opacity-50";
 
