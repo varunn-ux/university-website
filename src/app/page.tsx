@@ -8,6 +8,14 @@ import { Textarea } from "@/components/ui/Textarea";
 
 import { Select } from "@/components/ui/Select";
 
+import { Checkbox } from "@/components/ui/Checkbox";
+
+import { Radio } from "@/components/ui/Radio";
+
+import { Switch } from "@/components/ui/Switch";
+
+import { FeaturesSection } from "@/components/sections/FeaturesSection";
+
 export default function HomePage() {
   return (
     <main className="container mx-auto space-y-10 py-16">
@@ -16,7 +24,9 @@ export default function HomePage() {
       ========================== */}
 
       <section className="space-y-4">
-        <Heading level={1}>Welcome to LNCT University</Heading>
+        <Heading level={1} align="center">
+          Welcome to LNCT University
+        </Heading>
 
         <Heading level={2}>Admissions Open 2026</Heading>
 
@@ -170,7 +180,9 @@ export default function HomePage() {
 
       <section className="space-y-10">
         <div className="space-y-2">
-          <Heading level={1}>Textarea Component Demo</Heading>
+          <Heading level={1} align="center">
+            Textarea Component Demo
+          </Heading>
 
           <Text color="muted">Demonstration of all Textarea component variations.</Text>
         </div>
@@ -266,7 +278,9 @@ export default function HomePage() {
 
       <section className="space-y-10">
         <div className="space-y-2">
-          <Heading level={1}>Select Component Demo</Heading>
+          <Heading level={1} align="center">
+            Select Component Demo
+          </Heading>
 
           <Text color="muted">Demonstration of all Select component variations.</Text>
         </div>
@@ -388,6 +402,300 @@ export default function HomePage() {
               <option value="bba">BBA</option>
             </optgroup>
           </Select>
+        </div>
+      </section>
+
+      {/* ==========================
+    Checkbox Component Demo
+========================== */}
+
+      <section className="space-y-10">
+        <div className="space-y-2">
+          <Heading level={1} align="center">
+            Checkbox Component Demo
+          </Heading>
+
+          <Text color="muted">Demonstration of all Checkbox component variations.</Text>
+        </div>
+
+        {/* Default Checkbox */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Default Checkbox</Heading>
+
+          <Checkbox label="Accept Terms & Conditions" />
+
+          <Checkbox
+            label="Subscribe to Newsletter"
+            helperText="Receive updates about admissions and events."
+          />
+
+          <Checkbox label="I agree to the Privacy Policy" required />
+        </div>
+
+        {/* Sizes */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Checkbox Sizes</Heading>
+
+          <Checkbox size="sm" label="Small Checkbox" />
+
+          <Checkbox size="md" label="Medium Checkbox" />
+
+          <Checkbox size="lg" label="Large Checkbox" />
+        </div>
+
+        {/* States */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Checkbox States</Heading>
+
+          <Checkbox label="Checked" defaultChecked />
+
+          <Checkbox label="Disabled" disabled />
+
+          <Checkbox label="Checked & Disabled" defaultChecked disabled />
+
+          <Checkbox label="Error State" error="You must accept the terms." />
+
+          <Checkbox label="Indeterminate" indeterminate />
+        </div>
+
+        {/* Multiple Selection */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Multiple Selection</Heading>
+
+          <Checkbox label="Computer Science" />
+
+          <Checkbox label="Mechanical Engineering" />
+
+          <Checkbox label="Civil Engineering" />
+
+          <Checkbox label="Electronics & Communication" />
+        </div>
+
+        {/* Rich Label */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Rich Label</Heading>
+
+          <Checkbox
+            label={
+              <>
+                I agree to the{" "}
+                <a href="#" className="text-[var(--color-primary)] underline">
+                  Terms & Conditions
+                </a>{" "}
+                and{" "}
+                <a href="#" className="text-[var(--color-primary)] underline">
+                  Privacy Policy
+                </a>
+                .
+              </>
+            }
+          />
+        </div>
+      </section>
+
+      {/* ==========================
+    Radio Component Demo
+========================== */}
+
+      <section className="space-y-10">
+        <div className="space-y-2">
+          <Heading level={1} align="center">
+            Radio Component Demo
+          </Heading>
+
+          <Text color="muted">Demonstration of all Radio component variations.</Text>
+        </div>
+
+        {/* Default Radio */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Default Radio</Heading>
+
+          <Radio name="default-program" value="btech" label="B.Tech" />
+
+          <Radio
+            name="default-program"
+            value="mba"
+            label="MBA"
+            helperText="Choose your preferred program."
+          />
+
+          <Radio name="default-program" value="mca" label="MCA" required />
+        </div>
+
+        {/* Radio Group */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Radio Group</Heading>
+
+          <Radio name="gender" value="male" label="Male" />
+
+          <Radio name="gender" value="female" label="Female" />
+
+          <Radio name="gender" value="other" label="Other" />
+        </div>
+
+        {/* Sizes */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Radio Sizes</Heading>
+
+          <Radio name="size-demo" size="sm" value="sm" label="Small" />
+
+          <Radio name="size-demo" size="md" value="md" label="Medium" />
+
+          <Radio name="size-demo" size="lg" value="lg" label="Large" />
+        </div>
+
+        {/* States */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Radio States</Heading>
+
+          <Radio name="state-demo" value="checked" label="Default Checked" defaultChecked />
+
+          <Radio name="state-demo" value="disabled" label="Disabled" disabled />
+
+          <Radio
+            name="state-demo-disabled"
+            value="checked-disabled"
+            label="Checked & Disabled"
+            defaultChecked
+            disabled
+          />
+
+          <Radio
+            name="state-demo"
+            value="error"
+            label="Error State"
+            error="Please select an option."
+          />
+        </div>
+
+        {/* Rich Label */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Rich Label</Heading>
+
+          <Radio
+            name="plan"
+            value="premium"
+            label={
+              <>
+                <strong>Premium Plan</strong>
+                <br />
+                Includes placement assistance and certification.
+              </>
+            }
+          />
+        </div>
+      </section>
+
+      {/* ==========================
+    Switch Component Demo
+========================== */}
+
+      <section className="space-y-10">
+        <div className="space-y-2">
+          <Heading level={1} align="center">
+            Switch Component Demo
+          </Heading>
+
+          <Text color="muted">Demonstration of all Switch component variations.</Text>
+        </div>
+
+        {/* Default Switch */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Default Switch</Heading>
+
+          <Switch label="Enable Notifications" />
+
+          <Switch
+            label="Receive Email Updates"
+            helperText="We'll notify you about important announcements."
+          />
+
+          <Switch label="Enable SMS Alerts" required />
+        </div>
+
+        {/* Sizes */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Switch Sizes</Heading>
+
+          <Switch size="sm" label="Small Switch" />
+
+          <Switch size="md" label="Medium Switch" />
+
+          <Switch size="lg" label="Large Switch" />
+        </div>
+
+        {/* States */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Switch States</Heading>
+
+          <Switch label="Default Checked" defaultChecked />
+
+          <Switch label="Disabled" disabled />
+
+          <Switch label="Checked & Disabled" defaultChecked disabled />
+
+          <Switch label="Error State" error="This setting is required." />
+        </div>
+
+        {/* Settings Example */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Application Settings</Heading>
+
+          <Switch
+            defaultChecked
+            label="Dark Mode"
+            helperText="Enable dark theme across the application."
+          />
+
+          <Switch
+            defaultChecked
+            label="Email Notifications"
+            helperText="Receive admission updates via email."
+          />
+
+          <Switch label="SMS Notifications" helperText="Receive SMS alerts for important events." />
+
+          <Switch
+            label="Marketing Emails"
+            helperText="Receive newsletters and promotional updates."
+          />
+        </div>
+
+        {/* Rich Label */}
+
+        <div className="space-y-6">
+          <Heading level={2}>Rich Label</Heading>
+
+          <Switch
+            defaultChecked
+            label={
+              <>
+                <strong>Placement Alerts</strong>
+                <br />
+                Receive notifications for new placement drives and internships.
+              </>
+            }
+          />
+        </div>
+      </section>
+      <section>
+        <div className="space-y-6">
+          <Heading level={2}>Claude Skill Code Design and Component</Heading>
+          <FeaturesSection />
         </div>
       </section>
     </main>
